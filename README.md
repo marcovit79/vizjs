@@ -1,3 +1,5 @@
+This fork support only NashornVizJS
+
 # vizjs
 
 Integration of the magic project https://github.com/mdaines/viz.js for PlantUML.
