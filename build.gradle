@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+repositories {
+  mavenCentral()
+}
+
+
+group 'it.mvit.forks.plantuml'
+version '0.0.1'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+
+}
+
+
+jar {
+  baseName = 'vizjs'
+  version =  version
+}
+
+publishing {
+  repositories {
+    maven {
+      name "MyMavenRepo"
+      url project.mavenRepoUrlSnapshot
+    }
+  }
+  publications {
+    mavenJava(MavenPublication) {
+      from components.java
+    }
+  }
+}

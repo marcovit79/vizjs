@@ -51,7 +51,7 @@ public abstract class VizJS {
 	 */
 	public static VizJS create() {
 		try {
-			return new V8VizJS();
+			return new NashornVizJS();
 		} catch (IOException e) {
 			throw new VizJSException("Loading of viz.js resource in .jar failed!", e);
 		}
